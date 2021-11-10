@@ -76,7 +76,7 @@ function App() {
         <br />
         <br />
         <div className="button">
-          {change === "" ? (
+          {change !== "Sardor" ? (
             <button className="btn" disabled>
               Disabled
             </button>
