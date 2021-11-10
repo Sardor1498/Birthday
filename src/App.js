@@ -2,6 +2,7 @@ import Confetti from 'react-confetti'
 import React, { useState } from 'react'
 import './App.css'
 import music from './audio/birthday.mp3'
+// import music2 from './audio/Muzanova_file.mp3'
 // import music1 from './audio/happy.mp3'
 import ReactAudioPlayer from 'react-audio-player'
 import Typical from 'react-typical'
@@ -30,11 +31,17 @@ function App() {
             <ReactAudioPlayer
               className="confetti-hidden"
               src={music}
-              preload="auto"
               autoPlay
               controls
             />
-          ) : null
+          ) : (null
+            // <ReactAudioPlayer
+            //   className="confetti-hidden"
+            //   src={music2}
+            //   autoPlay
+            //   controls
+            // />
+          )
         }
 
         {hidden ? <h1>{change} Tug`ilgan Kuning Muborak !</h1> : <h1>Salom Sardor a.k.a 😁</h1>}
@@ -84,6 +91,18 @@ function App() {
                 <br />
                 <h3>__.__.2021</h3>
               </div>
+            ) && change === "Sardorbek" ? (
+              <div className="center2">
+                <h3>11.11.1998</h3>
+                <br />
+                <h3>11.11.2021</h3>
+              </div>
+            ) : (
+              <div className="center2">
+                <h3>__.__.____</h3>
+                <br />
+                <h3>__.__.2021</h3>
+              </div>
             )
           }
 
@@ -115,7 +134,7 @@ function App() {
                   <Typical
                     loop={Infinity}
                     wrapper="p"
-                    steps={['To`ldirilishi shart !!!', 2000, 'Itaraman bo`masa', 2000, 'Huyyet qimasdan to`ldir ko`t 😡', 2000,]}
+                    steps={['To`ldirilishi shart !!!', 2000, 'Itaraman bo`masa', 2000, 'Huyyet qimasdan to`ldir ko`t 😡', 3000,]}
                   />
                 </>
               ) : (
@@ -127,8 +146,8 @@ function App() {
         <br />
         <br />
         <div className="button">
-          {change !== "Sardor" && change !== "Sirojiddin" && change !== "Hakimjon" ? (
-            <button className="btn" disabled>
+          {change !== "Sardor" && change !== "Sirojiddin" && change !== "Hakimjon" && change !== "Sardorbek" ? (
+            <button className="btn1" disabled>
               Disabled
             </button>
           ) : (
@@ -142,7 +161,7 @@ function App() {
                 height={620}
                 gravity={hidden !== true ? -1 : 0.1}
               />
-              {change !== "" ? "Happy Birthday" : "Click me"}
+              {!hidden ? "Happy Birthday" : "Exit"}
             </button>)}
         </div>
       </div>

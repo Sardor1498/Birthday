@@ -110,6 +110,16 @@
     border-radius: 15px;
     cursor: pointer;
 }
+.btn1 {
+    padding: 15px 25px;
+    background-color: #666;
+    border: none;
+    outline: none;
+    color: #fff;
+    box-shadow: 5px 10px 15px gray;
+    border-radius: 15px;
+    cursor: not-allowed;
+}
 
 .text {
     display: flex;
@@ -131,6 +141,7 @@
 
 .confetti {
     display: block;
+    z-index: 999;
 }
 
 .confetti-hidden {
