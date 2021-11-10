@@ -4,6 +4,7 @@ import './App.css'
 import music from './audio/birthday.mp3'
 // import music1 from './audio/happy.mp3'
 import ReactAudioPlayer from 'react-audio-player'
+import Typical from 'react-typical'
 
 
 function App() {
@@ -46,11 +47,46 @@ function App() {
               😍
             </div>
           ) : null}
-          <div className="center2">
-            <h3>11.11.1998</h3>
-            <br />
-            <h3>11.11.2021</h3>
-          </div>
+          {
+            change === "Hakimjon" ? (
+              <div className="center2">
+                <h3>04.11.1990</h3>
+                <br />
+                <h3>04.11.2021</h3>
+              </div>
+            ) : (
+              <div className="center2">
+                <h3>__.__.____</h3>
+                <br />
+                <h3>__.__.2021</h3>
+              </div>
+            ) && change === "Sirojiddin" ? (
+              <div className="center2">
+                <h3>23.07.2003</h3>
+                <br />
+                <h3>23.07.2021</h3>
+              </div>
+            ) : (
+              <div className="center2">
+                <h3>__.__.____</h3>
+                <br />
+                <h3>__.__.2021</h3>
+              </div>
+            ) && change === "Sardor" ? (
+              <div className="center2">
+                <h3>11.11.1998</h3>
+                <br />
+                <h3>11.11.2021</h3>
+              </div>
+            ) : (
+              <div className="center2">
+                <h3>__.__.____</h3>
+                <br />
+                <h3>__.__.2021</h3>
+              </div>
+            )
+          }
+
           {hidden ? (
             <div className="right2">
               😍
@@ -74,14 +110,24 @@ function App() {
             <span
               className={change === "" ? "error" : "typing"}
             >
-              {change === "" ? "To`ldirilishi shart !!!" : "To`ldirilmoqda ..."}
+              {change === "" ? (
+                <>
+                  <Typical
+                    loop={Infinity}
+                    wrapper="p"
+                    steps={['To`ldirilishi shart !!!', 2000, 'Itaraman bo`masa', 2000, 'Huyyet qimasdan to`ldir ko`t 😡', 2000,]}
+                  />
+                </>
+              ) : (
+                "To`ldirilmoqda ..."
+              )}
             </span>
           </div>
         )}
         <br />
         <br />
         <div className="button">
-          {change !== "Sardor" ? (
+          {change !== "Sardor" && change !== "Sirojiddin" && change !== "Hakimjon" ? (
             <button className="btn" disabled>
               Disabled
             </button>
