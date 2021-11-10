@@ -2,7 +2,7 @@ import Confetti from 'react-confetti'
 import React, { useState } from 'react'
 import './App.css'
 import music from './audio/birthday.mp3'
-// import AudioPlayer from 'react-audio-element'
+// import music1 from './audio/happy.mp3'
 import ReactAudioPlayer from 'react-audio-player'
 
 
@@ -29,6 +29,7 @@ function App() {
             <ReactAudioPlayer
               className="confetti-hidden"
               src={music}
+              preload="auto"
               autoPlay
               controls
             />
@@ -64,14 +65,18 @@ function App() {
             Allohim shu kunga yetkazganinga va ko`rsatganinga shukur o`zimmi baxtimga o`zim sog` boliii !!! 😜😜😜
           </span>
         ) : (
-          <form>
+          <div>
             <span className="text">Tugmani bosishdan oldin ismingizni kiriting!!!</span>
             <br />
             <div className="input1">
               <input className="input" onChange={getChange} type="text" placeholder="Iltimos ismingizni kiriting !!!" />
             </div>
-            <span className="error">{change === "" ? "To`ldirilishi shart !!!" : "To`ldirilmoqda ..."}</span>
-          </form>
+            <span
+              className={change === "" ? "error" : "typing"}
+            >
+              {change === "" ? "To`ldirilishi shart !!!" : "To`ldirilmoqda ..."}
+            </span>
+          </div>
         )}
         <br />
         <br />
@@ -83,7 +88,7 @@ function App() {
           ) : (
             <button
               className="btn"
-              onClick={() => hidden === true ? setHidden(false) : setHidden(true)}
+              onClick={() => change && hidden === true ? setHidden(false) : setHidden(true)}
             >
               <Confetti
                 className={hidden ? "confetti" : "confetti-hidden"}
