@@ -62,9 +62,9 @@ function App() {
               </div>
             ) && change === "Sirojiddin" ? (
               <div className="center2">
-                <h3>23.07.2003</h3>
+                <h3>12.04.2003</h3>
                 <br />
-                <h3>23.07.2021</h3>
+                <h3>12.04.2021</h3>
               </div>
             ) : (
               <div className="center2">
