@@ -13,19 +13,11 @@ function App() {
   const [change, setChange] = useState('');
 
 
-  function getChange(e) {
-    setChange(e.target.value)
-  }
 
   return (
     <div className="app">
-
-
       <div className="left"></div>
-
-
       <div className="center">
-
         {
           hidden ? (
             <ReactAudioPlayer
@@ -112,7 +104,6 @@ function App() {
             </div>
           ) : null}
         </div>
-
         <br />
         <hr />
         {hidden ? (
@@ -124,7 +115,12 @@ function App() {
             <span className="text">Tugmani bosishdan oldin ismingizni kiriting!!!</span>
             <br />
             <div className="input1">
-              <input className="input" onChange={getChange} type="text" placeholder="Iltimos ismingizni kiriting !!!" />
+              <input
+                className="input"
+                onChange={(e) => setChange(e.target.value)}
+                type="text"
+                placeholder="Iltimos ismingizni kiriting !!!"
+              />
             </div>
             <span
               className={change === "" ? "error" : "typing"}
@@ -134,7 +130,7 @@ function App() {
                   <Typical
                     loop={Infinity}
                     wrapper="p"
-                    steps={['To`ldirilishi shart !!!', 2000, 'Itaraman bo`masa', 2000, 'Huyyet qimasdan to`ldir ko`t 😡', 3000,]}
+                    steps={['To`ldirilishi shart !!!', 2000, 'To`ldirish qiyinmasu aka 😕😕😕', 2000, 'To`ldiree oneniii 😡😡😡', 3000,]}
                   />
                 </>
               ) : (
@@ -166,9 +162,7 @@ function App() {
         </div>
       </div>
 
-
       <div className="right"></div>
-
     </div>
   );
 }
