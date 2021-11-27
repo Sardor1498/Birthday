@@ -110,7 +110,7 @@ const Birthday = () => {
                             <div className="center2">
                                 <h3>19.07.2005</h3>
                                 <br />
-                                <h3>12.07.2021</h3>
+                                <h3>19.07.2021</h3>
                             </div>
                         ) : (
                             <div className="center2">
@@ -153,9 +153,9 @@ const Birthday = () => {
                                     <Typical
                                         loop={Infinity}
                                         wrapper="p"
-                                        steps={['To`ldirilishi shart !!!', 100,
-                                            'To`ldirish qiyinmasu 😕😕😕', 100,
-                                            'To`ldiree oneniii 😡😡😡', 100,
+                                        steps={['To`ldirilishi shart !!!', 2000,
+                                            'To`ldirish qiyinmasu 😕😕😕', 2000,
+                                            'To`ldiree oneniii 😡😡😡', 3000,
                                         ]}
                                         //steps={['To`ldirilishi shart !!!', 2000, 'Itaraman bo`masa', 2000, 'Huyyet qimasdan to`ldir ko`t 😡😡😡', 3000,]}
                                     />

@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css'
-// import Clock from './Clock/Clock';
 import Birthday from './components/Birthday';
 
 
